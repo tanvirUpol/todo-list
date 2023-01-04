@@ -1,0 +1,114 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(206, 206, 206);
+}
+
+form{
+  width: 100%;
+}
+
+
+.app{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 300px;
+  margin: 70px auto 0;
+  /* margin-top: 70px; */
+ 
+}
+
+.wrapper{
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  
+}
+
+/* inputs */
+
+.input{
+ padding: 0px 10px; 
+ border-style: hidden;
+ border-radius: 5px;
+ width: 100%;
+ 
+}
+
+.input:focus{
+  outline: solid  rgb(57, 187, 46);
+  outline-offset: 3px;
+}
+
+.icon{
+  width: 30px;
+}
+
+/* buttons */
+
+.btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  background-color: rgb(67, 34, 145);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover{
+  background-color: rgb(94, 49, 201);
+}
+
+/* task list */
+
+.tasks{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  
+}
+
+
+.task{
+  list-style: none;
+  background-color: #fff;
+  padding: 8px 10px;
+  border-radius: 5px;
+
+
+
+  
+}
+
+.task-group{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  font-size: small;
+}
+
+input[type="checkbox"] {
+  width: 32px;
+  height: 32px;
+  /* color: red; */
+}
+
+input[type="checkbox"]:checked {
+  accent-color: rgb(3, 186, 12);
+  color: #fff;
+}
