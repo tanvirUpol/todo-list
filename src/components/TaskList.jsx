@@ -1,13 +1,16 @@
 import TaskItem from "./TaskItem"
 
-function TaskList({tasks}) {
+function TaskList({tasks,deleteTask,checkTask,enterEditMode}) {
   return (
     
     <ul className="tasks">
-        {tasks.sort().map(task =>(
+        {tasks.map(task =>(
             <TaskItem
                 key={task.id}
                 task={task}
+                deleteTask = {deleteTask}
+                checkTask = {checkTask}
+                enterEditMode={enterEditMode}
             />
         ))}
         

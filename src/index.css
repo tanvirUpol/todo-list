@@ -51,10 +51,11 @@ form{
 }
 
 .icon{
-  width: 30px;
+  padding: 2px;
 }
 
 /* buttons */
+
 
 .btn{
   display: flex;
@@ -68,17 +69,56 @@ form{
   cursor: pointer;
 }
 
-.btn:hover{
-  background-color: rgb(94, 49, 201);
+.btn-update{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  background-color: rgb(67, 34, 145);
+  color: #f1f1f1ff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-delete{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  background-color: rgb(145, 34, 38);
+  color: #f1f1f1ff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.btn-delete:focus,.btn-delete:hover {
+  background-color: rgb(169, 41, 45);
+  outline: solid  rgb(145, 34, 38);
+  outline-offset: 1px;      
+}
+
+
+.btn:hover,.btn-update:hover,.btn-update:focus{
+  background-color: rgb(84, 43, 179);
+  outline: solid  rgb(67, 34, 145);
+  outline-offset: 1px;  
+}
+
+.up-del-btn{
+  position: relative;
+  left: 95px;
 }
 
 /* task list */
 
 .tasks{
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   gap: 12px;
-  width: 100%;
+  min-width: 100%;
   
 }
 
@@ -86,29 +126,64 @@ form{
 .task{
   list-style: none;
   background-color: #fff;
-  padding: 8px 10px;
+  padding: 6px 10px;
   border-radius: 5px;
-
-
-
-  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .task-group{
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   font-size: small;
 }
 
 input[type="checkbox"] {
-  width: 32px;
-  height: 32px;
-  /* color: red; */
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
 }
 
 input[type="checkbox"]:checked {
-  accent-color: rgb(3, 186, 12);
-  color: #fff;
+  accent-color: rgb(1, 131, 7);
+
+}
+
+input[type="checkbox"]:checked + label{
+  text-decoration: line-through;
+
+}
+
+
+.task-group label{
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.edit-form{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.edit-form .wrapper{
+  padding: 3rem;
+  background-color: #f1f1f1ff;
+  width: 500px;
+  border-radius: 5px;
+}
+
+.edit-form div{
+  margin-top: 200px;
 }
